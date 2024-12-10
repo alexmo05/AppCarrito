@@ -1,0 +1,46 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+    <display-name>Gestioncarrito</display-name>
+
+    <!-- Welcome file configuration -->
+    <welcome-file-list>
+        
+        <welcome-file>productos.jsp</welcome-file>
+        <welcome-file>carrito.jsp</welcome-file>
+        <welcome-file>formalizarPedido.jsp</welcome-file>
+    </welcome-file-list>
+
+    <!-- Servlet mappings -->
+    <servlet>
+        <servlet-name>CarroServlet</servlet-name>
+        <servlet-class>controller.CarroServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>CarroServlet</servlet-name>
+        <url-pattern>/agregarProducto</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CarroServlet</servlet-name>
+        <url-pattern>/incrementarCantidad</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CarroServlet</servlet-name>
+        <url-pattern>/disminuirCantidad</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CarroServlet</servlet-name>
+        <url-pattern>/eliminarProducto</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>CarroServlet</servlet-name>
+        <url-pattern>/formalizarPedido</url-pattern>
+    </servlet-mapping>
+</web-app>
+
